@@ -1,0 +1,98 @@
+* {
+    /* This is CSS version 3 */
+    /* CSS works with an order of specificity, so asterisk overrides specifying directly to an HTML tag
+    /* The asterisk is a special case, it means: apply whatever is in this set of curly brackets to the entire page
+    /* Courier new is in parenthesies becasue it has a space, Courier and monospace */
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;    
+    width: 100%;
+    background: #eee;
+    padding: 5px;    
+}
+.navbar > div {
+    margin-right: 10px;
+}
+
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: lightgrey;
+    /* By default, the modal starts with hidden visibility*/
+    visibility: hidden;        
+}
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 1rem 1.5rem;    
+    width: 25rem;    
+    border-radius: 0.5rem;
+}
+.close-button {
+    float: right;
+    width: 1.5rem;
+    line-height: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 1rem;
+    background-color: lightgrey;
+}
+.close-button:hover {
+   background-color: blue;
+   color: white;
+}
+
+/* show-modal is a class that gets called in the java script to display the dialogue box*/
+.show-modal {
+    opacity: 0.9;
+    visibility: visible;       
+}
+
+.modal-content input, .modal-content button {
+    margin: 10px 0;
+}
+
+button {
+    background-color: blue;
+    color: white;
+    border: none;
+    padding:10px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+}
+
+input { 
+    font-size: 1.1rem; 
+}
+
+.error {    
+    color: red;
+}
+
+.msg {
+    background-color: lightgrey;    
+    border: none; 
+    padding:10px;    
+    margin:10px 0;
+    font-size: 1.1rem;    
+    border-radius: 5px;
+}
+
+#btnAddItem {    
+    visibility: hidden;        
+}
+#btnAddItem.show-button {    
+    visibility: visible;       
+}
+
